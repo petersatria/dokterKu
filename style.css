@@ -13,10 +13,15 @@
 .hero {
 	width: 100%;
 	height: 80vh;
-	background-color: rgba(242, 242, 242, 1);
+	/* background-color: rgba(242, 242, 242, 1); */
+	background-image: url('https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
 }
 
 .hero-text h1 {
@@ -41,7 +46,8 @@
 
 .hero img {
 	height: 95%;
-	border-radius: 75% 25%;
+	border-radius: 75% 30%;
+	box-shadow: 5px 5px 10px 5px #b4b4b4;
 }
 
 .booking {
