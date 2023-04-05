@@ -41,8 +41,9 @@
                 </div>
                 <div class="row g-5">
                     <div class="col-6">
-                        <label for="email" class="form-label">Your name </label>
+                        <label for="name" class="form-label">Your name </label>
                         <input
+                            id="name"
                             class="form-control"
                             type="text"
                             placeholder="Name..."
@@ -59,30 +60,44 @@
                             placeholder="email@email.com"
                         />
                     </div>
-                    <div class="col-6">
-                        <label for="select-doctor" class="form-label"
-                            >Choose your Doctor here
+                    <div class="col-4">
+                        <label for="select-spesialis" class="form-label"
+                            >Spesialis
                         </label>
-                        <select id="select-doctor" class="form-select">
-                            <option selected>Select Doctor here</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <select
+                            onchange="filterDoctor(dokter)"
+                            id="select-spesialis"
+                            class="form-select"
+                        ></select>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <label for="select-doctor" class="form-label"
+                            >Choose your Doctor
+                        </label>
+                        <select id="select-doctor" class="form-select"></select>
+                    </div>
+
+                    <div class="col-4">
+                        <label for="date" class="form-label"
                             >Appointment date
                         </label>
-                        <input
-                            class="form-control"
-                            type="date"
-                            placeholder="Name..."
-                        />
+                        <input id="date" class="form-control" type="date" />
+                    </div>
+                    <div class="col-5">
+                        <button
+                            id="booking-appointment"
+                            onclick="booking()"
+                            class="btn btn-primary"
+                        >
+                            Book Appointment
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        <section class="container">
+            <div id="list-pemesanan"></div>
+        </section>
 
         <script src="data/dataDokter.js"></script>
         <script src="data/dataPemesanan.js"></script>
