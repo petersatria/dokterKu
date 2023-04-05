@@ -9,7 +9,7 @@
 let dokter = [
 	{
 		id: 1,
-		nama: 'Dr. Johnny Sins',
+		nama: 'Dr. Johnny',
 		spesialis: 'Dokter umum',
 		pengalaman: '6 tahun',
 		alumnus: 'Universitas Mehodist Indonesia,2015',
@@ -54,6 +54,15 @@ let dokter = [
 	},
 	{
 		id: 6,
+		nama: 'Dr. Sesilia',
+		spesialis: 'Dokter gigi',
+		pengalaman: '6 tahun',
+		alumnus: 'Universitas Mehodist Indonesia,2015',
+		praktek: 'Tangerang, Banten',
+		str: '1221100222165841'
+	},
+	{
+		id: 7,
 		nama: 'Dr. Sesilia',
 		spesialis: 'Dokter gigi',
 		pengalaman: '6 tahun',
