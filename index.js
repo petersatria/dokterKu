@@ -1,30 +1,26 @@
-function render(params) {
-	let dokterList = document.querySelector('#list-dokter')
-	params.forEach(el => {
-		let nama = el.nama
-		let spesialis = el.spesialis
-
-		const wrapper = document.createElement('div')
-		const namaDokter = document.createElement('h1')
-		const namaSpesialis = document.createElement('p')
-		namaDokter.innerText = nama
-		namaSpesialis.innerText = spesialis
-		wrapper.appendChild(namaDokter)
-		wrapper.appendChild(namaSpesialis)
-		dokterList.appendChild(wrapper)
-
-		let html = `
-			<div>
-				<h1>${nama}</h1>
-				<p>${spesialis}</p>
-			</div>`
-
-	});
-
+function render() {
+	let render = document.getElementById('list-dokter')
+	render.innerHTML = ''
+	for (let x = 0; x < dokter.length; x++) {
+		const idcard = dokter[x];
+		render.innerHTML += `
+		<div class="card col-md-3 m-3 p-0">
+			<img
+				src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/people-03.jpg"
+				class="card-image"
+			/>
+			<div class="card-body">
+				<h5>${idcard.nama}</h5>
+				<div class="line"></div>
+				<p class="desc">${idcard.spesialis}</p>
+				<p class="desc">${idcard.pengalaman}</p>
+			</div>
+		</div>`
+	}
 }
 
+render()
 
-render(dokter)
 
 function spesialisFilter(id) {
 	let result = {}
@@ -79,6 +75,9 @@ function booking() {
 	}
 
 	dataPemesanan.push(temp)
+	localStorage.setItem('data', JSON.stringify(dataPemesanan));
+	let scrollTo = document.querySelector('#list-pemesanan')
+	scrollTo.scrollIntoView()
 	temp = {}
 	document.querySelector('#name').value = ''
 	document.querySelector('#email').value = ''
@@ -87,7 +86,13 @@ function booking() {
 	listPemesanan()
 }
 
+let dataLocal = localStorage.getItem('data')
+
 function listPemesanan(idModal) {
+	if (dataLocal) {
+
+	}
+
 	let list = document.querySelector('#list-pemesanan')
 	list.innerHTML = ''
 	for (let { id, namaPasien, namaDokter, emailPasien, tanggal } of dataPemesanan) {
@@ -97,15 +102,16 @@ function listPemesanan(idModal) {
 			list.innerHTML += `
 			<div id=${id} class="card m-2" style="width: 18rem">
 				<div class="card-body">
-					<h5 class="card-title">${namaPasien}</h5>
+					<h5 class="card-title">Id.${id}</h5>
 					<p class="card-text"> Nama : ${namaPasien}</p>	
 					<p class="card-text"> Email : ${emailPasien}</p>	
 					<p class="card-text"> Tanggal : ${tanggal}</p>	
 					<p class="card-text"> Dokter : ${namaDokter}</p>	
-					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger">Delete</button>
+					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;"> Delete</button>
 					
 					<!-- Button trigger modal -->
-					<button type="button" onclick="editModal(${id})" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+					<button type="button" onclick="editModal(${id})" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
+					style="background-color: #0E54AE;border-color: #0E54AE;">
 					Edit
 					</button>
 				</div>
@@ -138,7 +144,7 @@ function listPemesanan(idModal) {
 							></button>
 						</div>
 						<div class="modal-body">
-							<div class="col-6">
+							<div class="col">
 								<label for="name" class="form-label"
 									>Your name
 								</label>
@@ -150,7 +156,7 @@ function listPemesanan(idModal) {
 									value="${namaPasien}"
 								/>
 							</div>
-							<div class="col-6">
+							<div class="col">
 								<label for="email" class="form-label"
 									>Email address
 								</label>
@@ -162,7 +168,7 @@ function listPemesanan(idModal) {
 									value="${emailPasien}"
 								/>
 							</div>
-							<div class="col-4">
+							<div class="col">
 								<label
 									for="select-spesialisModal${id}"
 									class="form-label"
@@ -175,7 +181,7 @@ function listPemesanan(idModal) {
 									disabled
 								></select>
 							</div>
-							<div class="col-4">
+							<div class="col">
 								<label
 									for="select-doctorModal${id}"
 									class="form-label"
@@ -188,7 +194,7 @@ function listPemesanan(idModal) {
 								></select>
 							</div>
 		
-							<div class="col-4">
+							<div class="col">
 								<label for="date" class="form-label"
 									>Appointment date
 								</label>
@@ -213,8 +219,9 @@ function listPemesanan(idModal) {
 								onclick="editModalPemesanan(event, ${idModal})"
 								class="btn btn-primary"
 								data-bs-dismiss="modal"
+								style="background-color: #0E54AE;border-color: #0E54AE;"
 							>
-								Book Appointment
+								Update
 							</button>
 						</div>
 					</div>
@@ -225,15 +232,15 @@ function listPemesanan(idModal) {
 			list.innerHTML += `
 			<div id=${id} class="card m-2" style="width: 18rem">
 				<div class="card-body">
-					<h5 class="card-title">${namaPasien}</h5>
+					<h5 class="card-title">Id.${id}</h5>
 					<p class="card-text"> Nama : ${namaPasien}</p>	
 					<p class="card-text"> Email : ${emailPasien}</p>	
 					<p class="card-text"> Tanggal : ${tanggal}</p>	
 					<p class="card-text"> Dokter : ${namaDokter}</p>	
-					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger">Delete</button>
+					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;">Delete</button>
 					
 					<!-- Button trigger modal -->
-					<button type="button" onclick="editModal(${id})" class="btn btn-success" >
+					<button type="button" onclick="editModal(${id})" class="btn btn-success" style="background-color: #0E54AE;border-color: #0E54AE;">
 					Edit
 					</button>
 				</div>

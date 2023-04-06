@@ -8,6 +8,7 @@
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 	color: #333;
+
 }
 
 .hero {
@@ -38,9 +39,9 @@
 }
 
 .hero-text p {
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 400;
-	line-height: 45px;
+	/* line-height: 45px; */
 	color: #333;
 }
 
@@ -94,6 +95,68 @@
 	justify-content: flex-start;
 }
 
-/* .card {
-	margin: 10px;
-} */
+#list-pemesanan h2 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing: 2px;
+}
+
+.card-body h5 {
+	font-weight: 500;
+	color: #0E54AE;
+}
+
+.card-body p {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.line {
+	margin: 10px 0;
+	width: 25%;
+	border-radius: 0px;
+	border-bottom: 4px solid #BC74A5;
+}
+
+.line p {
+	line-height: 12px;
+}
+
+.line h1 {
+	margin-bottom: 20px;
+}
+
+.semi-footer {
+	background-image: url('https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 20vh;
+	overflow-x: hidden;
+}
+
+footer {
+	/* height: 20vh; */
+	background-color: #0E54AE;
+}
+
+footer div p {
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	color: #ffffff;
+}
+
+.award .text-center {
+	font-weight: 500;
+}
+
+.text-center span {
+	font-weight: 700;
+	color: #0E54AE;
+}
+
+.btn-primary {
+	background-color: #BC74A5;
+}
