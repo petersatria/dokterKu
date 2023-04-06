@@ -29,7 +29,29 @@
             </div>
         </div>
         <div class="container">
-            <div id="list-dokter"></div>
+            <div class="namefilter">
+                <label for="">Filter nama</label>
+                <input type="text" id="searchText" placeholder="Cari dokter">
+                <button id="tombol" onclick="search()">Submit</button>
+            </div>
+            <div class="namefilter">
+                <label for="">Filter spesialis</label>
+                <input type="text" id="specText" placeholder="Cari Spesialis">
+                <button id="tombol" onclick="spec()">Submit</button>
+            </div>
+            <div id="list-dokter">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/sins.jpg" class="card-image">
+                    <div class="card-body">
+                      <h5 class="desc">Nama:</h5>
+                      <p class="desc">Spesialis:</p>
+                      <p class="desc">Pengalaman:</p>
+                      <p class="desc">Alumnus:</p>
+                      <p class="desc">Praktek:</p>
+                      <a href="#" class="btn btn-primary">Pilih?</a>
+                    </div>
+                  </div>
+            </div>
         </div>
         <div class="bg-booking">
             <div class="container booking">
