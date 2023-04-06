@@ -19,8 +19,13 @@
             <div class="hero">
                 <div class="hero-text">
                     <h2>Care For Lifetime</h2>
-                    <h1>Welcome to FakeDoctor</h1>
-                    <p>God can not be everywhere so he sends Doctors</p>
+                    <h1>Welcome to DokterKu</h1>
+                    <p>
+                        Merupakan aplikasi kesehatan yang memberikan solusi
+                        kesehatan lengkap<br />
+                        dan terpercaya untuk memenuhi kebutuhan kesehatan kamu
+                        dan keluarga.
+                    </p>
                 </div>
                 <img
                     src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -29,7 +34,7 @@
             </div>
         </div>
         <div class="container">
-            <div id="list-dokter"></div>
+            <div id="list-dokter" class="row justify-content-center my-5"></div>
         </div>
         <div class="bg-booking">
             <div class="container booking">
@@ -50,7 +55,7 @@
                         </p>
                     </div>
                     <div class="col-6">
-                        <label for="name" class="form-label">Your name </label>
+                        <label for="name" class="form-label">Nama</label>
                         <input
                             id="name"
                             class="form-control"
@@ -60,7 +65,7 @@
                     </div>
                     <div class="col-6">
                         <label for="email" class="form-label"
-                            >Email address
+                            >Alamat Email
                         </label>
                         <input
                             id="email"
@@ -81,14 +86,14 @@
                     </div>
                     <div class="col-4">
                         <label for="select-doctor" class="form-label"
-                            >Choose your Doctor
+                            >Pilih Dokter
                         </label>
                         <select id="select-doctor" class="form-select"></select>
                     </div>
 
                     <div class="col-4">
                         <label for="date" class="form-label"
-                            >Appointment date
+                            >Pilih Tanggal
                         </label>
                         <input id="date" class="form-control" type="date" />
                     </div>
@@ -97,130 +102,67 @@
                             id="booking-appointment"
                             onclick="booking()"
                             class="btn btn-primary"
+                            style="
+                                background-color: #bc74a5;
+                                border-color: #bc74a5;
+                            "
                         >
-                            Book Appointment
+                            Buat Janji
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <section class="container">
-            <div id="list-pemesanan"></div>
+        <section class="container my-5">
+            <div class="mb-4">
+                <h1>Daftar Pemesanan</h1>
+            </div>
+            <div id="list-pemesanan">
+                <h2>Tidak ada pemesanan, silahkan daftar terlebih dahulu...</h2>
+            </div>
         </section>
-        <!-- <div>
-            <button
-                onclick="editList()"
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-            >
-                Launch static backdrop modal
-            </button>
-
-            <div
-                class="modal fade"
-                id="staticBackdrop"
-                data-bs-backdrop="static"
-                data-bs-keyboard="false"
-                tabindex="-1"
-                aria-labelledby="staticBackdropLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1
-                                class="modal-title fs-5"
-                                id="staticBackdropLabel"
-                            >
-                                Modal title
-                            </h1>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-6">
-                                <label for="name" class="form-label"
-                                    >Your name
-                                </label>
-                                <input
-                                    id="name"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="Name..."
-                                />
-                            </div>
-                            <div class="col-6">
-                                <label for="email" class="form-label"
-                                    >Email address
-                                </label>
-                                <input
-                                    id="email"
-                                    class="form-control"
-                                    type="text"
-                                    placeholder="email@email.com"
-                                />
-                            </div>
-                            <div class="col-4">
-                                <label
-                                    for="select-spesialisModal"
-                                    class="form-label"
-                                    >Spesialis
-                                </label>
-                                <select
-                                    onchange="filterDoctor(dokter, '#select-spesialisModal', '#select-doctorModal')"
-                                    id="select-spesialisModal"
-                                    class="form-select"
-                                ></select>
-                            </div>
-                            <div class="col-4">
-                                <label
-                                    for="select-doctorModal"
-                                    class="form-label"
-                                    >Choose your Doctor
-                                </label>
-                                <select
-                                    id="select-doctorModal"
-                                    class="form-select"
-                                ></select>
-                            </div>
-
-                            <div class="col-4">
-                                <label for="date" class="form-label"
-                                    >Appointment date
-                                </label>
-                                <input
-                                    id="date"
-                                    class="form-control"
-                                    type="date"
-                                />
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-bs-dismiss="modal"
-                            >
-                                Close
-                            </button>
-                            <button
-                                id="booking-appointment"
-                                onclick="editList()"
-                                class="btn btn-primary"
-                            >
-                                Book Appointment
-                            </button>
-                        </div>
-                    </div>
+        <section class="semi-footer">
+            <div class="container py-5 d-flex justify-content-between">
+                <div class="line">
+                    <h1>DokterKu</h1>
+                    <p>FAQ</p>
+                    <p>Blog</p>
+                    <p>Syarat & Ketentuan</p>
+                    <p>Kebijakan Privasi</p>
+                </div>
+                <div class="line">
+                    <h1>About</h1>
+                    <p>Karir</p>
+                    <p>Security</p>
+                    <p>Media</p>
+                    <p>Promo</p>
+                </div>
+                <div class="award position-relative">
+                    <p>DokterKu is a multiple award winner</p>
+                    <p class="text-center">
+                        Best Patient Care <span>2022</span>
+                    </p>
+                    <p class="text-center">
+                        Best Practice & Team <span>2022</span>
+                    </p>
+                    <p class="text-center">
+                        Best Patient Care <span>2022</span>
+                    </p>
+                    <img
+                        src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/03/footer-awards-new.png"
+                        alt=""
+                        class="position-absolute top-50 start-50 translate-middle"
+                    />
                 </div>
             </div>
-        </div> -->
+        </section>
+        <footer>
+            <div class="container py-4">
+                <p class="m-0">
+                    Copyright 2023 by DokterKu. All rights reserved
+                </p>
+            </div>
+        </footer>
 
         <script src="data/dataDokter.js"></script>
         <script src="data/dataPemesanan.js"></script>

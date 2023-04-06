@@ -10,64 +10,50 @@ let dokter = [
 	{
 		id: 1,
 		nama: 'Dr. Johnny',
-		spesialis: 'Dokter umum',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		spesialis: 'Dokter Umum',
+		pengalaman: 'Mendapatkan gelar kedokterannya setelah menamatkan pendidikan di China Medical University pada tahun 1980.',
+
 	},
 	{
 		id: 2,
 		nama: 'Dr. Bahtarul',
-		spesialis: 'Spesialis anak',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		spesialis: 'Spesialis Anak',
+		pengalaman: 'Mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Gadjah Mada.',
+
 	},
 	{
 		id: 3,
 		nama: 'Dr. Jati',
 		spesialis: 'Spesialis Kulit',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		pengalaman: 'Mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Indonesia, Depok pada tahun 2006.',
+
 	},
 	{
 		id: 4,
 		nama: 'Dr. Malik',
 		spesialis: 'Spesialis Mata',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		pengalaman: 'Mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Gadjah Mada.',
+
 	},
 	{
 		id: 5,
 		nama: 'Dr. Peter',
 		spesialis: 'Spesialis Penyakit Dalam',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		pengalaman: 'Mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Indonesia.',
+
 	},
 	{
 		id: 6,
 		nama: 'Dr. Sesilia',
-		spesialis: 'Dokter gigi',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		spesialis: 'Dokter Gigi',
+		pengalaman: 'Mendapatkan gelar Kedokteran Gigi setelah menamatkan pendidikan di Universitas Indonesia.		',
+
 	},
 	{
 		id: 7,
-		nama: 'Dr. Sesilia',
-		spesialis: 'Dokter gigi',
-		pengalaman: '6 tahun',
-		alumnus: 'Universitas Mehodist Indonesia,2015',
-		praktek: 'Tangerang, Banten',
-		str: '1221100222165841'
+		nama: 'Dr. A',
+		spesialis: 'Dokter Umum',
+		pengalaman: 'Mendapatkan gelar spesialisnya setelah menamatkan pendidikan di Universitas Gadjah Mada.',
+
 	},
 ]
