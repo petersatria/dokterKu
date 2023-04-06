@@ -32,6 +32,7 @@ function spec() {
 	let baru =[]
 	baru=dokter.filter(el=>el.spesialis.toLowerCase().includes(searchText.toLowerCase()))
 
+	
 	render(baru)
 }
 
