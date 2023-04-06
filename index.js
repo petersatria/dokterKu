@@ -1,32 +1,29 @@
 // console.log(dokter);
 
-function render(params) {
-	let dokterList = document.querySelector('#list-dokter')
-	params.forEach(el => {
-		let nama = el.nama
-		let spesialis = el.spesialis
 
-		const wrapper = document.createElement('div')
-		const namaDokter = document.createElement('h1')
-		const namaSpesialis = document.createElement('p')
-		namaDokter.innerText = nama
-		namaSpesialis.innerText = spesialis
-		wrapper.appendChild(namaDokter)
-		wrapper.appendChild(namaSpesialis)
-		dokterList.appendChild(wrapper)
-
-		let html = `
-			<div>
-				<h1>${nama}</h1>
-				<p>${spesialis}</p>
-			</div>`
-
-	});
-
+function render(){
+	let render = document.getElementById('list-dokter')
+	render.innerHTML=''
+	for (let x = 0; x < dokter.length; x++) {
+		const idcard = dokter[x];
+		render.innerHTML += `
+		<div class="card" style="width: 18rem;">
+                    <img src="./images/sins.jpg" class="card-image">
+                    <div class="card-body">
+                      <h5 class="desc">${idcard.nama}</h5>
+                      <p class="desc">Spesialis:  ${idcard.spesialis}</p>
+                      <p class="desc">Pengalaman:  ${idcard.pengalaman}</p>
+                      <p class="desc">Alumnus:  ${idcard.alumnus}</p>
+                      <p class="desc">Praktek:  ${idcard.praktek}</p>
+                      <a href="#" class="btn btn-primary">Pilih?</a>
+                    </div>
+                  </div>`
+	}
 }
 
+render()
 
-render(dokter)
+
 
 
 function spesialisFilter() {
