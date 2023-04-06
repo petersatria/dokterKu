@@ -57,10 +57,26 @@
 
 }
 
+.booking-info h2 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 15px;
+	color: #BC74A5;
+}
+
+.booking-info h1 {
+	font-size: 56px;
+	font-weight: 700;
+	color: #0E54AE;
+}
+
+
 .booking-img img {
-	max-width: 80%;
+	max-width: 100%;
 	padding-right: 50px;
-	/* min-height: 50vh; */
+	min-height: 50vh;
+	height: auto;
+	width: auto;
 
 }
 
@@ -71,3 +87,13 @@
 	background-repeat: no-repeat;
 	/* min-height: 50vh; */
 }
+
+#list-pemesanan {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+/* .card {
+	margin: 10px;
+} */

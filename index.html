@@ -39,7 +39,16 @@
                         alt=""
                     />
                 </div>
-                <div class="row g-5">
+                <div class="row g-5 col-6">
+                    <div class="booking-info">
+                        <h2>Pesan Kunjungan Anda Di</h2>
+                        <h1>DokterKu</h1>
+                        <h1></h1>
+                        <p>
+                            Ada keadaan darurat? Lakukan pemesanan dengan kami
+                            dengan formulir sederhana di bawah ini
+                        </p>
+                    </div>
                     <div class="col-6">
                         <label for="name" class="form-label">Your name </label>
                         <input
@@ -97,6 +106,19 @@
         </div>
         <section class="container">
             <div id="list-pemesanan"></div>
+            <div id="1680765057461" class="card" style="width: 18rem">
+                <div class="card-body">
+                    <h5 class="card-title">${namaPasien}</h5>
+                    <p class="card-text">Nama : ${namaPasien}</p>
+                    <p class="card-text">Email : ${emailPasien}</p>
+                    <p class="card-text">Tanggal : ${tanggal}</p>
+                    <p class="card-text">Dokter : ${namaDokter}</p>
+                    <a href="#" class="btn btn-danger" onclick="deleteList()"
+                        >Delete</a
+                    >
+                    <a href="#" class="btn btn-success">Edit</a>
+                </div>
+            </div>
         </section>
 
         <script src="data/dataDokter.js"></script>
