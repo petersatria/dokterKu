@@ -1,133 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dokterku</title>
-        <link rel="stylesheet" href="style.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokterku</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Code Here.. -->
+    <!-- /////////////////////// HEADER (NAVBAR) /////////////////////-->
+    <div class="container-fluid p-0">
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Care For Lifetime</h2>
+          <h1>Welcome to DokterKu</h1>
+          <p>God can not be everywhere so he sends Doctors</p>
+          <!-- <div class="desc">
+            DokterKu adalah sistem layanan antrian yang digunakan oleh rumah
+            sakit DokterKu. Sekarang kamu dapat menunggu antrian pemeriksaan
+            tanpa harus berada di rumah sakit secara langsung !. Gunakan layanan
+            kami dan tunggu giliran pemeriksaan dimanapun dan kapanpun
+          </div> -->
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          alt=""
         />
-    </head>
-    <body>
-        <!-- Code Here.. -->
-        <div class="container-fluid p-0">
-            <div class="hero">
-                <div class="hero-text">
-                    <h2>Care For Lifetime</h2>
-                    <h1>Welcome to FakeDoctor</h1>
-                    <p>God can not be everywhere so he sends Doctors</p>
-                </div>
-                <img
-                    src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                    alt=""
-                />
-            </div>
+      </div>
+    </div>
+    <!-- /////////////////////// LIST DOKTER  /////////////////////-->
+    <div class="container-dok">
+      <!-- <img src="walter-otto-PT70CT6mATQ-unsplash.jpg" /> -->
+      <div id="list-dokter">
+        <div class="dokter1 dokter">
+          <!-- <div class="pad"></div> -->
+          <img src="jati.jpg" width="335" height="420" />
+          <p>Dokter Jati</p>
+          <p class="spesialis-dok">Dokter Spesialis anak</p>
+          <div>
+            Appropriately empower dynamic leadership skills after business
+            portals. Globally myocardinate interactive supply chains with
+            quality.
+          </div>
         </div>
-        <div class="container">
-            <div id="list-dokter"></div>
+        <div class="dokter2 dokter">
+          <img src="peter.jpg" width="335" height="420" />
+          <p>Dokter Peter</p>
+          <p class="spesialis-dok">Dokter Spesialis Jantung</p>
+          <div>
+            Appropriately empower dynamic leadership skills after business
+            portals. Globally myocardinate interactive supply chains with
+            quality.
+          </div>
         </div>
-        <div class="bg-booking">
-            <div class="container booking">
-                <div class="booking-img d-flex justify-content-end">
-                    <img
-                        src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/doctor-1150x1536.png"
-                        alt=""
-                    />
-                </div>
-                <div class="row g-5 col-6">
-                    <div class="booking-info">
-                        <h2>Pesan Kunjungan Anda Di</h2>
-                        <h1>DokterKu</h1>
-                        <h1></h1>
-                        <p>
-                            Ada keadaan darurat? Lakukan pemesanan dengan kami
-                            dengan formulir sederhana di bawah ini
-                        </p>
-                    </div>
-                    <div class="col-6">
-                        <label for="name" class="form-label">Your name </label>
-                        <input
-                            id="name"
-                            class="form-control"
-                            type="text"
-                            placeholder="Name..."
-                        />
-                    </div>
-                    <div class="col-6">
-                        <label for="email" class="form-label"
-                            >Email address
-                        </label>
-                        <input
-                            id="email"
-                            class="form-control"
-                            type="text"
-                            placeholder="email@email.com"
-                        />
-                    </div>
-                    <div class="col-4">
-                        <label for="select-spesialis" class="form-label"
-                            >Spesialis
-                        </label>
-                        <select
-                            onchange="filterDoctor(dokter)"
-                            id="select-spesialis"
-                            class="form-select"
-                        ></select>
-                    </div>
-                    <div class="col-4">
-                        <label for="select-doctor" class="form-label"
-                            >Choose your Doctor
-                        </label>
-                        <select id="select-doctor" class="form-select"></select>
-                    </div>
+        <div class="dokter3 dokter">
+          <img src="malik.jpg" width="335" height="420" />
+          <p>Dokter Malik</p>
+          <p class="spesialis-dok">Dokter Spesialis Kandungan</p>
+          <div>
+            Appropriately empower dynamic leadership skills after business
+            portals. Globally myocardinate interactive supply chains with
+            quality.
+          </div>
+        </div>
+        <div class="dokter4 dokter">
+          <img src="sesil.jpg" width="335" height="360" />
+          <p>dokter Sesilia</p>
+          <p class="spesialis-dok">Dokter Spesialis Hati</p>
+          <div>
+            Appropriately empower dynamic leadership skills after business
+            portals. Globally myocardinate interactive supply chains with
+            quality.
+          </div>
+        </div>
+        <div class="dokter5 dokter">
+          <img src="bahtarul.jpg" width="335" height="360" />
+          <p>dokter Bahtarul</p>
+          <p class="spesialis-dok">Dokter Spesialis Anak</p>
+          <div>
+            Appropriately empower dynamic leadership skills after business
+            portals. Globally myocardinate interactive supply chains with
+            quality.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-booking">
+      <div class="container booking">
+        <div class="booking-img d-flex justify-content-end">
+          <img
+            src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/doctor-1150x1536.png"
+            width="335"
+            height="335"
+          />
+        </div>
+        <div class="row g-5 col-6">
+          <div class="booking-info">
+            <h2>Pesan Kunjungan Anda Di</h2>
+            <h1>DokterKu</h1>
+            <h1></h1>
+            <p>
+              Ada keadaan darurat? Lakukan pemesanan dengan kami dengan formulir
+              sederhana di bawah ini
+            </p>
+          </div>
+          <div class="col-6">
+            <label for="name" class="form-label">Your name </label>
+            <input
+              id="name"
+              class="form-control"
+              type="text"
+              placeholder="Name..."
+            />
+          </div>
+          <div class="col-6">
+            <label for="email" class="form-label">Email address </label>
+            <input
+              id="email"
+              class="form-control"
+              type="text"
+              placeholder="email@email.com"
+            />
+          </div>
+          <div class="col-4">
+            <label for="select-spesialis" class="form-label">Spesialis </label>
+            <select
+              onchange="filterDoctor(dokter)"
+              id="select-spesialis"
+              class="form-select"
+            ></select>
+          </div>
+          <div class="col-4">
+            <label for="select-doctor" class="form-label"
+              >Choose your Doctor
+            </label>
+            <select id="select-doctor" class="form-select"></select>
+          </div>
 
-                    <div class="col-4">
-                        <label for="date" class="form-label"
-                            >Appointment date
-                        </label>
-                        <input id="date" class="form-control" type="date" />
-                    </div>
-                    <div class="col-5">
-                        <button
-                            id="booking-appointment"
-                            onclick="booking()"
-                            class="btn btn-primary"
-                        >
-                            Book Appointment
-                        </button>
-                    </div>
-                </div>
-            </div>
+          <div class="col-4">
+            <label for="date" class="form-label">Appointment date </label>
+            <input id="date" class="form-control" type="date" />
+          </div>
+          <div class="col-5">
+            <button
+              id="booking-appointment"
+              onclick="booking()"
+              class="btn btn-primary"
+            >
+              Book Appointment
+            </button>
+          </div>
         </div>
-        <section class="container">
-            <div id="list-pemesanan"></div>
-            <div id="1680765057461" class="card" style="width: 18rem">
-                <div class="card-body">
-                    <h5 class="card-title">${namaPasien}</h5>
-                    <p class="card-text">Nama : ${namaPasien}</p>
-                    <p class="card-text">Email : ${emailPasien}</p>
-                    <p class="card-text">Tanggal : ${tanggal}</p>
-                    <p class="card-text">Dokter : ${namaDokter}</p>
-                    <a href="#" class="btn btn-danger" onclick="deleteList()"
-                        >Delete</a
-                    >
-                    <a href="#" class="btn btn-success">Edit</a>
-                </div>
-            </div>
-        </section>
-
-        <script src="data/dataDokter.js"></script>
-        <script src="data/dataPemesanan.js"></script>
-        <script src="index.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+      </div>
+    </div>
+    <section class="container">
+      <div id="list-pemesanan"></div>
+      <div id="1680765057461" class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">${namaPasien}</h5>
+          <p class="card-text">Nama : ${namaPasien}</p>
+          <p class="card-text">Email : ${emailPasien}</p>
+          <p class="card-text">Tanggal : ${tanggal}</p>
+          <p class="card-text">Dokter : ${namaDokter}</p>
+          <a href="#" class="btn btn-danger" onclick="deleteList()">Delete</a>
+          <a href="#" class="btn btn-success">Edit</a>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Dokterku.</h4>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Our service</a></li>
+              <li><a href="#">Carrers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="data/dataDokter.js"></script>
+    <script src="data/dataPemesanan.js"></script>
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
