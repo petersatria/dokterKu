@@ -85,6 +85,7 @@ function booking() {
 	let tanggal = document.querySelector('#date').value
 
 	let temp = {
+		id: Date.now(),
 		namaPasien,
 		emailPasien,
 		namaDokter,
@@ -103,12 +104,26 @@ function booking() {
 function listPemesanan() {
 	let list = document.querySelector('#list-pemesanan')
 	list.innerHTML = ''
-	for (let { namaPasien, namaDokter } of dataPemesanan) {
+	for (let { id, namaPasien, namaDokter, emailPasien, tanggal } of dataPemesanan) {
 		list.innerHTML += `
-		<p>${namaPasien}</p>
-		<p>${namaDokter}</p>
+		<div id=${id} class="card m-2" style="width: 18rem">
+			<div class="card-body">
+				<h5 class="card-title">${namaPasien}</h5>
+				<p class="card-text"> Nama : ${namaPasien}</p>	
+				<p class="card-text"> Email : ${emailPasien}</p>	
+				<p class="card-text"> Tanggal : ${tanggal}</p>	
+				<p class="card-text"> Dokter : ${namaDokter}</p>	
+				<a href="#" class="btn btn-danger">Delete</a>
+				<a href="#" class="btn btn-success">Edit</a>
+			</div>
+		</div>
 		`
 	}
 }
 
 listPemesanan()
+
+function deleteList(id) {
+	console.log(document.getElementById('1680765057461'));
+
+}
