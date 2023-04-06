@@ -7,3 +7,5 @@ function validator() {
     window.open("index.html", "_blank");
   }
 }
+
+// aldsfjalsdfjalsdjflasjkdf
