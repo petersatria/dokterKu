@@ -1,4 +1,4 @@
-function render() {
+function render(dokter) {
 	let render = document.getElementById('list-dokter')
 	render.innerHTML = ''
 	for (let x = 0; x < dokter.length; x++) {
@@ -19,8 +19,23 @@ function render() {
 	}
 }
 
-render()
+render(dokter)
 
+function search() {
+	let searchText = document.getElementById('searchText').value;
+	let baru = []
+	baru = dokter.filter(el => el.nama.toLowerCase().includes(searchText.toLowerCase()))
+
+	render(baru)
+}
+function spec() {
+	let searchText = document.getElementById('specText').value;
+	let baru = []
+	baru = dokter.filter(el => el.spesialis.toLowerCase().includes(searchText.toLowerCase()))
+
+
+	render(baru)
+}
 
 function spesialisFilter(id) {
 	let result = {}
@@ -48,7 +63,6 @@ spesialisFilter('#select-spesialis')
 
 function filterDoctor(arr, idSelectorSpesialis, idSelectorDokter) {
 	let selectSpesialis = document.querySelector(idSelectorSpesialis).value
-	console.log(selectSpesialis);
 	let filtered = arr.filter(e => e.spesialis.includes(selectSpesialis))
 	let selector = document.querySelector(idSelectorDokter)
 	selector.innerHTML = ''

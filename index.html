@@ -34,6 +34,16 @@
             </div>
         </div>
         <div class="container">
+            <div class="namefilter">
+                <label for="">Filter nama</label>
+                <input type="text" id="searchText" placeholder="Cari dokter" />
+                <button id="tombol" onclick="search()">Submit</button>
+            </div>
+            <div class="namefilter">
+                <label for="">Filter spesialis</label>
+                <input type="text" id="specText" placeholder="Cari Spesialis" />
+                <button id="tombol" onclick="spec()">Submit</button>
+            </div>
             <div id="list-dokter" class="row justify-content-center my-5"></div>
         </div>
         <div class="bg-booking">
