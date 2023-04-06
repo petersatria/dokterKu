@@ -143,12 +143,11 @@ function listPemesanan(idModal) {
 									>Your name
 								</label>
 								<input
-									id="name${id}"
+									id="name"
 									class="form-control"
 									type="text"
 									placeholder="Name..."
 									value="${namaPasien}"
-									oninput="onChangeName(event, ${id})"
 								/>
 							</div>
 							<div class="col-6">
@@ -161,7 +160,6 @@ function listPemesanan(idModal) {
 									type="text"
 									placeholder="email@email.com"
 									value="${emailPasien}"
-									oninput="onChangeEmail(event, ${id})"
 								/>
 							</div>
 							<div class="col-4">
@@ -199,7 +197,6 @@ function listPemesanan(idModal) {
 									class="form-control"
 									type="date"
 									value="${tanggal}"
-									oninput="onChangeTanggal(event, ${id})"
 								/>
 							</div>
 						</div>
@@ -213,7 +210,7 @@ function listPemesanan(idModal) {
 							</button>
 							<button
 								id="booking-appointment"
-								onclick="editModalPemesanan(${idModal})"
+								onclick="editModalPemesanan(event, ${idModal})"
 								class="btn btn-primary"
 								data-bs-dismiss="modal"
 							>
@@ -246,11 +243,6 @@ function listPemesanan(idModal) {
 	}
 }
 
-function passId(id) {
-	console.log(document.getElementById(id).id);
-	return document.getElementById(id).id
-}
-
 function deleteList(id) {
 	let newData = []
 	for (const data of dataPemesanan) {
@@ -268,49 +260,12 @@ function editModal(id) {
 	filterDoctor(dokter, `#select-spesialisModal${id}`, `#select-doctorModal${id}`)
 }
 
-function onChangeName(event, id) {
-	let namaPasien = event.target.value
-	let data = {
-		id,
-		namaPasien,
-	}
-	editModalPemesanan(id, data)
-}
-
-function onChangeEmail(event, id) {
-	let emailPasien = event.target.value
-	let data = {
-		id,
-		emailPasien,
-	}
-	editModalPemesanan(id, data)
-}
-
-function onChangeTanggal(event, id) {
-	let tanggal = event.target.value
-	let data = {
-		id,
-		tanggal,
-	}
-	editModalPemesanan(id, data)
-}
-
-function editModalPemesanan(idModal, dataNew) {
-	if (!dataNew) {
-		return
-	}
-
+function editModalPemesanan(event, idModal) {
 	for (const data of dataPemesanan) {
 		if (data.id === idModal) {
-			if (dataNew.hasOwnProperty('namaPasien')) {
-				data.namaPasien = dataNew.namaPasien
-			}
-			if (dataNew.hasOwnProperty('emailPasien')) {
-				data.emailPasien = dataNew.emailPasien
-			}
-			if (dataNew.hasOwnProperty('tanggal')) {
-				data.tanggal = dataNew.tanggal
-			}
+			data.namaPasien = event.target.parentElement.parentElement.children[1].children[0].children.name.value
+			data.emailPasien = event.target.parentElement.parentElement.children[1].children[1].children.email.value
+			data.tanggal = event.target.parentElement.parentElement.children[1].children[4].children.date.value
 		}
 	}
 	listPemesanan()
