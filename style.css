@@ -94,6 +94,10 @@
 	justify-content: flex-start;
 }
 
+
+.card-image{
+	margin: 10%;
+}
 /* .card {
 	margin: 10px;
 } */
