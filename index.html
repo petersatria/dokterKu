@@ -33,17 +33,34 @@
                 />
             </div>
         </div>
-        <div class="container">
-            <div class="namefilter">
-                <label for="">Filter nama</label>
-                <input type="text" id="searchText" placeholder="Cari dokter" />
-                <button id="tombol" onclick="search()">Submit</button>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-6">
+                    <label for="searchText" class="form-label"
+                        >Filter nama</label
+                    >
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="searchText"
+                        placeholder="Cari dokter"
+                        oninput="search(event)"
+                    />
+                    <!-- <button id="tombol" onclick="search()">Submit</button> -->
+                </div>
+                <div class="col-6">
+                    <!-- <label for="">Filter spesialis</label> -->
+                    <!-- <input type="text" id="specText" placeholder="Cari Spesialis" /> -->
+                    <!-- <button id="tombol" onclick="spec()">Submit</button> -->
+                    <label for="specText" class="form-label">Spesialis </label>
+                    <select
+                        id="specText"
+                        class="form-select"
+                        onchange="spec()"
+                    ></select>
+                </div>
             </div>
-            <div class="namefilter">
-                <label for="">Filter spesialis</label>
-                <input type="text" id="specText" placeholder="Cari Spesialis" />
-                <button id="tombol" onclick="spec()">Submit</button>
-            </div>
+
             <div id="list-dokter" class="row justify-content-center my-5"></div>
         </div>
         <div class="bg-booking">
@@ -123,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <section class="container my-5">
+        <section id="daftar-pemesanan" class="container my-5">
             <div class="mb-4">
                 <h1>Daftar Pemesanan</h1>
             </div>
