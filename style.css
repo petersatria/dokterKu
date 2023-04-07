@@ -203,11 +203,15 @@ footer div p {
 
 }
 
-.card img {
-	object-fit: cover;
-	/* float: left; */
-	/* width: 100%; */
 
-	max-width: 335px;
-	height: 420px;
+#booking-appointment {
+	background-color: #bc74a5;
+	border-color: #bc74a5;
+	padding: 12px 30px;
+}
+
+#booking-appointment:hover {
+	background-color: #0E54AE;
+	border-color: #0E54AE;
+	padding: 12px 30px;
 }

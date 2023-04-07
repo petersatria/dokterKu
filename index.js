@@ -160,11 +160,19 @@ function listPemesanan(idModal) {
 					<p class="card-text"> Email : ${emailPasien}</p>	
 					<p class="card-text"> Tanggal : ${tanggal}</p>	
 					<p class="card-text"> Dokter : ${namaDokter}</p>	
-					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;"> Delete</button>
+					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;"
+								onmouseover="this.style.backgroundColor='#dc8fc4'"
+								onmouseover="this.style.borderColor='#dc8fc4'"
+								onmouseout="this.style.backgroundColor='#BC74A5'"
+					> Batalkan</button>
 					
 					<!-- Button trigger modal -->
 					<button type="button" onclick="editModal(${id})" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop" 
-					style="background-color: #0E54AE;border-color: #0E54AE;">
+					style="background-color: #0E54AE;border-color: #0E54AE;"
+					onmouseover="this.style.backgroundColor='#1b66c8'"
+								onmouseover="this.style.borderColor='#1b66c8'"
+								onmouseout="this.style.backgroundColor='#0E54AE'"
+					>
 					Edit
 					</button>
 				</div>
@@ -268,11 +276,14 @@ function listPemesanan(idModal) {
 								Close
 							</button>
 							<button
-								id="booking-appointment"
+								id="update-appointment"
 								onclick="editModalPemesanan(event, ${idModal})"
 								class="btn btn-primary"
 								data-bs-dismiss="modal"
 								style="background-color: #0E54AE;border-color: #0E54AE;"
+								onmouseover="this.style.backgroundColor='#bc74a5'"
+								onmouseover="this.style.borderColor='#bc74a5'"
+								onmouseout="this.style.backgroundColor='#0E54AE'"
 							>
 								Update
 							</button>
@@ -290,10 +301,18 @@ function listPemesanan(idModal) {
 					<p class="card-text"> Email : ${emailPasien}</p>	
 					<p class="card-text"> Tanggal : ${tanggal}</p>	
 					<p class="card-text"> Dokter : ${namaDokter}</p>	
-					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;">Delete</button>
+					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;"
+								onmouseover="this.style.backgroundColor='#dc8fc4'"
+								onmouseover="this.style.borderColor='#dc8fc4'"
+								onmouseout="this.style.backgroundColor='#BC74A5'"
+					>Batalkan</button>
 
 					<!-- Button trigger modal -->
-					<button type="button" onclick="editModal(${id})" class="btn btn-success" style="background-color: #0E54AE;border-color: #0E54AE;">
+					<button type="button" onclick="editModal(${id})" class="btn btn-success" style="background-color: #0E54AE;border-color: #0E54AE;"
+								onmouseover="this.style.backgroundColor='#1b66c8'"
+								onmouseover="this.style.borderColor='#1b66c8'"
+								onmouseout="this.style.backgroundColor='#0E54AE'"
+					>
 					Edit
 					</button>
 				</div>
