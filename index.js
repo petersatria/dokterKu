@@ -21,20 +21,37 @@ function render(dokter) {
 
 render(dokter)
 
-function search() {
-	let searchText = document.getElementById('searchText').value;
+function search(event) {
+	// let searchText = document.getElementById('searchText');
+	let elHtml = document.getElementById('list-dokter')
+	let searchText = event.target.value.trim()
+	console.log(event.target.value);
+	// searchText.
 	let baru = []
 	baru = dokter.filter(el => el.nama.toLowerCase().includes(searchText.toLowerCase()))
 
-	render(baru)
+	if (baru.length === 0) {
+		elHtml.innerHTML = `
+		<p class="desc">Dokter yang dicari tidak tersedia</p>
+		<div class="line"></div>
+		`
+	} else {
+		render(baru)
+	}
 }
 function spec() {
 	let searchText = document.getElementById('specText').value;
-	let baru = []
-	baru = dokter.filter(el => el.spesialis.toLowerCase().includes(searchText.toLowerCase()))
+	console.log(searchText);
+	if (searchText === 'Semua') {
+		render(dokter)
+	} else {
+		let baru = []
+		baru = dokter.filter(el => el.spesialis.toLowerCase().includes(searchText.toLowerCase()))
 
 
-	render(baru)
+		render(baru)
+	}
+
 }
 
 function spesialisFilter(id) {
@@ -48,7 +65,8 @@ function spesialisFilter(id) {
 
 	}
 	let filtered = Object.keys(result)
-
+	console.log(filtered);
+	filtered.unshift('Semua')
 	let selector = document.querySelector(id)
 	selector.innerHTML = ''
 	filtered.forEach(e => {
@@ -59,6 +77,7 @@ function spesialisFilter(id) {
 }
 
 
+spesialisFilter('#specText')
 spesialisFilter('#select-spesialis')
 
 function filterDoctor(arr, idSelectorSpesialis, idSelectorDokter) {
@@ -66,6 +85,9 @@ function filterDoctor(arr, idSelectorSpesialis, idSelectorDokter) {
 	let filtered = arr.filter(e => e.spesialis.includes(selectSpesialis))
 	let selector = document.querySelector(idSelectorDokter)
 	selector.innerHTML = ''
+	if (selectSpesialis === 'Semua') {
+		filtered = dokter
+	}
 	filtered.forEach(dokter => {
 		selector.innerHTML += `
 		<option value="${dokter.nama}">${dokter.nama}</option>
@@ -90,7 +112,7 @@ function booking() {
 
 	dataPemesanan.push(temp)
 	localStorage.setItem('data', JSON.stringify(dataPemesanan));
-	let scrollTo = document.querySelector('#list-pemesanan')
+	let scrollTo = document.querySelector('#daftar-pemesanan')
 	scrollTo.scrollIntoView()
 	temp = {}
 	document.querySelector('#name').value = ''
@@ -103,16 +125,10 @@ function booking() {
 let dataLocal = localStorage.getItem('data')
 
 function listPemesanan(idModal) {
-	if (dataLocal) {
-
-	}
-
 	let list = document.querySelector('#list-pemesanan')
 	list.innerHTML = ''
 	for (let { id, namaPasien, namaDokter, emailPasien, tanggal } of dataPemesanan) {
 		if (idModal && idModal === id) {
-			console.log(id, 'id');
-			console.log(idModal, 'idModal');
 			list.innerHTML += `
 			<div id=${id} class="card m-2" style="width: 18rem">
 				<div class="card-body">
@@ -252,7 +268,7 @@ function listPemesanan(idModal) {
 					<p class="card-text"> Tanggal : ${tanggal}</p>	
 					<p class="card-text"> Dokter : ${namaDokter}</p>	
 					<button onclick="deleteList(${id})" type="submit" class="btn btn-danger" style="background-color: #BC74A5;border-color: #BC74A5;">Delete</button>
-					
+
 					<!-- Button trigger modal -->
 					<button type="button" onclick="editModal(${id})" class="btn btn-success" style="background-color: #0E54AE;border-color: #0E54AE;">
 					Edit
