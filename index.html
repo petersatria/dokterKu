@@ -72,6 +72,7 @@
                             type="text"
                             placeholder="Name..."
                         />
+                        <p id="emptyName" style="display: none;">*Nama tidak boleh Kosong</p>
                     </div>
                     <div class="col-6">
                         <label for="email" class="form-label"
@@ -83,6 +84,7 @@
                             type="text"
                             placeholder="email@email.com"
                         />
+                        <p id="emptyEmail" style="display: none;">*Email tidak boleh kosong</p>
                     </div>
                     <div class="col-4">
                         <label for="select-spesialis" class="form-label"
@@ -106,11 +108,11 @@
                             >Pilih Tanggal
                         </label>
                         <input id="date" class="form-control" type="date" />
+                        <p id="emptyDate" style="display: none;"> *Tanggal belum ditentukan</p>
                     </div>
                     <div class="col-5">
                         <button
                             id="booking-appointment"
-                            onclick="booking()"
                             class="btn btn-primary"
                             style="
                                 background-color: #bc74a5;

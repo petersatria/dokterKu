@@ -37,6 +37,28 @@ function spec() {
 	render(baru)
 }
 
+document.getElementById('booking-appointment').onclick = () => {
+	const emptyName= document.getElementById('emptyName')
+	const emptyEmail= document.getElementById('emptyEmail')
+	const emptyDate= document.getElementById('emptyDate')
+	let nama= document.getElementById('name')
+	let email=document.getElementById('email')
+	let date= document.getElementById('date')
+	if (nama.value === '' || !nama.value) {
+		emptyName.style.display = 'inline';
+	} else if (email.value === '' || !email.value) {
+		emptyEmail.style.display = 'inline';
+		emptyName.style.display = 'none';
+	}else if (date.value === '' || !nama.value) {
+		emptyDate.style.display = 'inline';
+		emptyEmail.style.display = 'none';
+		emptyName.style.display = 'none';
+	} else {
+		booking()
+		emptyDate.style.display = 'none'
+	}
+};
+
 function spesialisFilter(id) {
 	let result = {}
 
