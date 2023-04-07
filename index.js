@@ -6,8 +6,9 @@ function render(dokter) {
 		render.innerHTML += `
 		<div class="card col-md-3 m-3 p-0">
 			<img
-				src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/people-03.jpg"
+				src=${idcard.pic}
 				class="card-image"
+				
 			/>
 			<div class="card-body">
 				<h5>${idcard.nama}</h5>
@@ -55,18 +56,18 @@ function spec() {
 }
 
 document.getElementById('booking-appointment').onclick = () => {
-	const emptyName= document.getElementById('emptyName')
-	const emptyEmail= document.getElementById('emptyEmail')
-	const emptyDate= document.getElementById('emptyDate')
-	let nama= document.getElementById('name')
-	let email=document.getElementById('email')
-	let date= document.getElementById('date')
+	const emptyName = document.getElementById('emptyName')
+	const emptyEmail = document.getElementById('emptyEmail')
+	const emptyDate = document.getElementById('emptyDate')
+	let nama = document.getElementById('name')
+	let email = document.getElementById('email')
+	let date = document.getElementById('date')
 	if (nama.value === '' || !nama.value) {
 		emptyName.style.display = 'inline';
 	} else if (email.value === '' || !email.value) {
 		emptyEmail.style.display = 'inline';
 		emptyName.style.display = 'none';
-	}else if (date.value === '' || !nama.value) {
+	} else if (date.value === '' || !nama.value) {
 		emptyDate.style.display = 'inline';
 		emptyEmail.style.display = 'none';
 		emptyName.style.display = 'none';
@@ -186,7 +187,7 @@ function listPemesanan(idModal) {
 								class="modal-title fs-5"
 								id="staticBackdropLabel"
 							>
-								Modal title
+								Ubah data 
 							</h1>
 							<button
 								type="button"
@@ -198,7 +199,7 @@ function listPemesanan(idModal) {
 						<div class="modal-body">
 							<div class="col">
 								<label for="name" class="form-label"
-									>Your name
+									>Nama
 								</label>
 								<input
 									id="name"
@@ -210,7 +211,7 @@ function listPemesanan(idModal) {
 							</div>
 							<div class="col">
 								<label for="email" class="form-label"
-									>Email address
+									>Alamat Email 
 								</label>
 								<input
 									id="email"
@@ -237,7 +238,7 @@ function listPemesanan(idModal) {
 								<label
 									for="select-doctorModal${id}"
 									class="form-label"
-									>Choose your Doctor
+									>Pilih Dokter
 								</label>
 								<select
 									id="select-doctorModal${id}"
@@ -248,7 +249,7 @@ function listPemesanan(idModal) {
 		
 							<div class="col">
 								<label for="date" class="form-label"
-									>Appointment date
+									>Pilih Tanggal
 								</label>
 								<input
 									id="date"

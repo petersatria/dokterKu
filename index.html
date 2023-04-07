@@ -15,16 +15,39 @@
     </head>
     <body>
         <!-- Code Here.. -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="brand" href="#">Dokter<span>Ku</span></a>
+                <div>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dokterContainer"
+                                >Dokter</a
+                            >
+                        </li>
+                        <li class="nav-item ms-4">
+                            <a class="nav-link" href="#janjiContainer"
+                                >Daftar</a
+                            >
+                        </li>
+                        <li class="nav-item ms-4">
+                            <a class="nav-link" href="#daftar-pemesanan"
+                                >Riwayat</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="container-fluid p-0">
             <div class="hero">
                 <div class="hero-text">
                     <h2>Care For Lifetime</h2>
                     <h1>Welcome to DokterKu</h1>
                     <p>
-                        Merupakan aplikasi kesehatan yang memberikan solusi
-                        kesehatan lengkap<br />
-                        dan terpercaya untuk memenuhi kebutuhan kesehatan kamu
-                        dan keluarga.
+                        Aplikasi kesehatan yang memberikan solusi kesehatan
+                        lengkap dan terpercaya <br />untuk memenuhi kebutuhan
+                        kesehatan kamu dan keluarga.
                     </p>
                 </div>
                 <img
@@ -33,7 +56,7 @@
                 />
             </div>
         </div>
-        <div class="container my-5">
+        <div id="dokterContainer" class="container py-5">
             <div class="row">
                 <div class="col-6">
                     <label for="searchText" class="form-label"
@@ -63,7 +86,7 @@
 
             <div id="list-dokter" class="row justify-content-center my-5"></div>
         </div>
-        <div class="bg-booking">
+        <div id="janjiContainer" class="bg-booking">
             <div class="container booking">
                 <div class="booking-img d-flex justify-content-end">
                     <img
@@ -89,7 +112,9 @@
                             type="text"
                             placeholder="Name..."
                         />
-                        <p id="emptyName" style="display: none;">*Nama tidak boleh Kosong</p>
+                        <p id="emptyName" style="display: none">
+                            *Nama tidak boleh Kosong
+                        </p>
                     </div>
                     <div class="col-6">
                         <label for="email" class="form-label"
@@ -101,7 +126,9 @@
                             type="text"
                             placeholder="email@email.com"
                         />
-                        <p id="emptyEmail" style="display: none;">*Email tidak boleh kosong</p>
+                        <p id="emptyEmail" style="display: none">
+                            *Email tidak boleh kosong
+                        </p>
                     </div>
                     <div class="col-4">
                         <label for="select-spesialis" class="form-label"
@@ -125,7 +152,9 @@
                             >Pilih Tanggal
                         </label>
                         <input id="date" class="form-control" type="date" />
-                        <p id="emptyDate" style="display: none;"> *Tanggal belum ditentukan</p>
+                        <p id="emptyDate" style="display: none">
+                            *Tanggal belum ditentukan
+                        </p>
                     </div>
                     <div class="col-5">
                         <button
@@ -134,6 +163,7 @@
                             style="
                                 background-color: #bc74a5;
                                 border-color: #bc74a5;
+                                padding: 12px 30px;
                             "
                         >
                             Buat Janji
